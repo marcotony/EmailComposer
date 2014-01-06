@@ -36,6 +36,8 @@
 
        <header-file src="src/ios/EmailComposer.h" />
        <source-file src="src/ios/EmailComposer.m" />
+
+        <framework src="MessageUI.framework" />
    </platform>
 
 </plugin>

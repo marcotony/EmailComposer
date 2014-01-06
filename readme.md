@@ -1,5 +1,6 @@
 # EmailComposer with attachments handling
 
+This Plugin is inspired from EmailComposer plugin [here](https://github.com/GalCohen/EmailComposer-phonegap-plugin)
 - Add the EmailComposer.java to your project (use the correct package, or change it in the file)
 
 - Place the EmailComposer.js file somewhere in your www folder, and include it from your html.
@@ -10,11 +11,11 @@
 
 Callable interface:
 
-	window.plugins.emailComposer.showEmailComposerWithCallback(callback,subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments);
+	window.plugins.EmailComposer.showEmailComposerWithCallback(callback,subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments);
 
 or
 
-	window.plugins.emailComposer.showEmailComposer(subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments);
+	window.plugins.EmailComposer.showEmailComposer(subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments);
 
 **ATTENTION:** the callback will never be triggered, it's here only for consistency with the iOS plugin
 
@@ -30,4 +31,4 @@ or
 
 **Example**
 
-	window.plugins.emailComposer.showEmailComposerWithCallback(null,"Look at this photo","Take a look at <b>this<b/>:",["example@email.com", "johndoe@email.org"],[],[],true,["_complete_path/image.jpg", "_other_complete_path/file.zip"]);
+	window.plugins.EmailComposer.showEmailComposerWithCallback(null,"Look at this photo","Take a look at <b>this<b/>:",["example@email.com", "johndoe@email.org"],[],[],true,["_complete_path/image.jpg", "_other_complete_path/file.zip"]);

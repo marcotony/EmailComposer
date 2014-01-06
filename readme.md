@@ -1,13 +1,10 @@
 # EmailComposer with attachments handling
 
-This Plugin is inspired from EmailComposer plugin [here](https://github.com/GalCohen/EmailComposer-phonegap-plugin)
-- Add the EmailComposer.java to your project (use the correct package, or change it in the file)
+This Plugin is inspired from EmailComposer plugin [here](https://github.com/GalCohen/EmailComposer-phonegap-plugin).
 
-- Place the EmailComposer.js file somewhere in your www folder, and include it from your html.
+This plugin allows you to send html email to any email accounts you want including attachments
 
-- Add the plugin to your config.xml file in this way:
-
-	<plugin name="EmailComposer" value="org.apache.cordova.EmailComposer"/>
+This has been successfully tested from Cordova 2.2.0 through to version 3.1.0.
 
 Callable interface:
 
@@ -20,14 +17,14 @@ or
 **ATTENTION:** the callback will never be triggered, it's here only for consistency with the iOS plugin
 
 **Parameters:**
-- callback: never used
-- subject: a string representing the subject of the email; can be null
-- body: a string representing the email body (could be HTML code, in this case set **isHtml** to **true**); can be null
-- toRecipients: a js array containing all the email addresses for TO field; can be null/empty
-- ccRecipients: a js array containing all the email addresses for CC field; can be null/empty
-- bccRecipients: a js array containing all the email addresses for BCC field; can be null/empty
+- callback: just for compatability with the old plugin and will be updated to work soon
+- subject: a string representing the subject of the email; could be empty
+- body: a string representing the email body (could be HTML code, in this case set **isHtml** to **true**); could be empty
+- toRecipients: array containing all the email addresses for TO field; could be empty
+- ccRecipients: array containing all the email addresses for CC field; could be empty
+- bccRecipients: a js array containing all the email addresses for BCC field;  could be empty
 - isHtml: a bool value indicating if the body is HTML or plain text
-- attachments: a js array containing all full paths to the files you want to attach; can be null/empty
+- attachments: a js array containing all full paths to the files you want to attach; could be empty
 
 **Example**
 

@@ -56,5 +56,5 @@ cordova.addConstructor(function()  {
 					   window.Cordova = cordova;
 					   };
 					   
-					   window.plugins.emailComposer = new EmailComposer();
+					   window.plugins.EmailComposer = new EmailComposer();
 					   });

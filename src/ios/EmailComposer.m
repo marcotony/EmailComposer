@@ -110,7 +110,9 @@
         if (attachmentPaths) {
             for (NSString* path in attachmentPaths) {
                 @try {
-                    NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];
+                    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+                    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:path];
+                    NSData *data = [[NSFileManager defaultManager] contentsAtPath:filePath];
                     [mailComposer addAttachmentData:data mimeType:[self getMimeTypeFromFileExtension:[path pathExtension]] fileName:[NSString stringWithFormat:@"attachment%d.%@", counter, [path pathExtension]]];
                     counter++;
                 }

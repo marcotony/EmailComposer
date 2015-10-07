@@ -14,6 +14,18 @@ or
 
 	window.plugins.EmailComposer.showEmailComposer(subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments);
 
+## Installation 
+
+for Cordova >= 3.0.0
+
+phonegap local plugin add https://github.com/hazemhagrass/EmailComposer.git
+
+cordova plugin add https://github.com/hazemhagrass/EmailComposer.git
+
+for Cordova >= 5.0.0
+
+cordova plugin add com-badrit-emailcomposer
+
 **ATTENTION:** the callback will never be triggered, it's here only for consistency with the iOS plugin
 
 **Parameters:**

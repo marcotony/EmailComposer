@@ -47,8 +47,7 @@ public class EmailComposerPlugin extends CordovaPlugin {
 
 	private void sendEmail(JSONObject parameters) {
 		
-		final Intent emailIntent = new Intent();
-		emailIntent.Initialize(emailIntent.ACTION_SEND,"");
+		final Intent emailIntent = new Intent(emailIntent.ACTION_SEND,"");
 		//String callback = parameters.getString("callback");
 
 		boolean isHTML = false;

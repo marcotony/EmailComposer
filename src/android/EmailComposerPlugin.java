@@ -138,7 +138,7 @@ public class EmailComposerPlugin extends CordovaPlugin {
 			JSONArray attachments = parameters.getJSONArray("attachments");
 			if (attachments != null && attachments.length() > 0) {
 				ArrayList<Uri> uris = new ArrayList<Uri>();
-				Uri uri = new Uri();
+				Uri uri = Uri.parse("file:///"));
 				//convert from paths to Android friendly Parcelable Uri's
 				for (int i=0; i<1; i++) {
 					try {

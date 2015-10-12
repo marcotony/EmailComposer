@@ -78,13 +78,13 @@ public class EmailComposerPlugin extends CordovaPlugin {
 			String body = parameters.getString("body");
 			if (body != null && body.length() > 0) {
 				if (isHTML) {
-					ArrayList<String> extra_text = new ArrayList<String>();
-					extra_text.add(body);
-					emailIntent.putStringArrayListExtra(android.content.Intent.EXTRA_TEXT, extra_text);
+				//	ArrayList<String> extra_text = new ArrayList<String>();
+				//	extra_text.add(body);
+					emailIntent.putStringArrayListExtra(android.content.Intent.EXTRA_TEXT, body);
 				} else {
-					ArrayList<String> extra_text = new ArrayList<String>();
-					extra_text.add(body);
-					emailIntent.putStringArrayListExtra(android.content.Intent.EXTRA_TEXT, extra_text);
+				//	ArrayList<String> extra_text = new ArrayList<String>();
+				//	extra_text.add(body);
+					emailIntent.putStringArrayListExtra(android.content.Intent.EXTRA_TEXT, body);
 				}
 			}
 		} catch (Exception e) {

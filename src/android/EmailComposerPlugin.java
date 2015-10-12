@@ -154,7 +154,9 @@ public class EmailComposerPlugin extends CordovaPlugin {
 					emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
 				}
 			}
-			emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///storage/emulated/0/mili_log.txt"));
+			emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, Uri.parse("file:///storage/emulated/0/mili_log.txt"));
+			emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, Uri.parse("file:///storage/emulated/0/DCIM/Camera/20151007_104905.jpg"));
+			
 		} catch (Exception e) {
 			LOG.e("EmailComposer", "Error handling attachments param: " + e.toString());
 		}

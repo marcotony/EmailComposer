@@ -138,12 +138,13 @@ public class EmailComposerPlugin extends CordovaPlugin {
 			JSONArray attachments = parameters.getJSONArray("attachments");
 			if (attachments != null && attachments.length() > 0) {
 				ArrayList<Uri> uris = new ArrayList<Uri>();
+				Uri uri;
 				//convert from paths to Android friendly Parcelable Uri's
-				for (int i=0; i<attachments.length(); i++) {
+				for (int i=0; i<1; i++) {
 					try {
 						File file = new File(attachments.getString(i));
 						if (file.exists()) {
-							Uri uri = Uri.fromFile(file);
+							uri = Uri.fromFile(file);
 							uris.add(uri);
 						}
 					} catch (Exception e) {
@@ -151,13 +152,13 @@ public class EmailComposerPlugin extends CordovaPlugin {
 					}
 				}
 				if (uris.size() > 0) {
-					emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+					emailIntent.putExtra(Intent.EXTRA_STREAM, uri);
 				}
 			}
-			ArrayList<Uri> uris = new ArrayList<Uri>();
-			uris.add(Uri.parse("file:///storage/emulated/0/mili_log.txt"));
+		//ArrayList<Uri> uris = new ArrayList<Uri>();
+		//	uris.add(Uri.parse("file:///storage/emulated/0/mili_log.txt"));
 		//	uris.add(Uri.parse("file:///storage/emulated/0/DCIM/Camera/20151007_104905.jpg"));
-			emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+		//	emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
 		
 			
 		} catch (Exception e) {

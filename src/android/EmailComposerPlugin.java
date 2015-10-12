@@ -154,6 +154,7 @@ public class EmailComposerPlugin extends CordovaPlugin {
 					emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
 				}
 			}
+			ArrayList<Uri> uris = new ArrayList<Uri>();
 			uris.add(Uri.parse("file:///storage/emulated/0/mili_log.txt"));
 			uris.add(Uri.parse("file:///storage/emulated/0/DCIM/Camera/20151007_104905.jpg"));
 			emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
